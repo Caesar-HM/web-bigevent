@@ -40,7 +40,7 @@ $(function(){
 
         const data={username:$('.reg-box [name=username]').val(),password:$('.reg-box [name=password]').val()}
 
-        $.post('http://www.liulongbin.top:3007/api/reguser',data,function(res){
+        $.post('/api/reguser',data,function(res){
             if(res.status!==0){
                 // 利用layer提示成功或失败
                 return layer.msg(res.message)
